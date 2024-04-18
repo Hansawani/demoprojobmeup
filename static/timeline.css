@@ -1,0 +1,116 @@
+
+ 
+ /* ****** */ 
+ 
+ .timeline-parcours {
+    width:960px;
+    height:auto;
+    min-height:10px;
+    margin:100px auto;
+ }
+ .container-info  {
+    width:960px;
+    margin:0 auto;
+    height:auto;
+    min-height:187px;
+ }
+ .timeline-section-tl {
+    width:236px;
+    height:auto;
+    min-height:10px;
+    display:inline-block;
+ }
+ .infobox {
+    width:226px;
+    height:auto;
+    min-height:10px;
+    background-color:white;
+    padding:5px;
+    border-radius:10px;
+    display:inline-block;
+    margin:0px 1px;
+ }
+ .fleche-bloc {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: #ffffff transparent transparent transparent;
+    margin:auto;
+ }
+ .parcours-box {
+    opacity:0;
+    z-transition: all 1s ease;
+ -ms-transition: all 1s ease;
+ -o-transition: all 1s ease;
+ transition: all 1s ease;
+ }
+ 
+ .container-time-line {
+    width:960px;
+    margin:auto;
+ }
+ .time-line-parcours {
+    width:730px;
+    height:10px;
+    background-color:#432828;
+    margin:auto;
+ }
+ .timeline-indicator {
+    width:0px;
+    height:10px;
+    background-color:rgb(120, 131, 208);
+    -webkit-transition: all 100ms ease;
+ -moz-transition: all 1s ease;
+ -ms-transition: all 1s ease;
+ -o-transition: all 1s ease;
+ transition: all 1s ease;
+ }
+ .tl-round {
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-color:rgb(85, 69, 69);
+    margin:auto;
+     -webkit-transition: all 100ms ease;
+ -moz-transition: all 500ms ease;
+ -ms-transition: all 500ms ease;
+ -o-transition: all 500ms ease;
+ transition: all 500ms ease;
+ }
+ .container-bulle {
+    margin-top:-15px;
+ }
+ /* animation classe */ 
+ 
+ .anim-phase-1 {
+    width:240px;
+    -webkit-transition: all 100ms ease;
+ -moz-transition: all 100ms ease;
+ -ms-transition: all 100ms ease;
+ -o-transition: all 100ms ease;
+ transition: all 100ms ease;
+ }
+ .anim-phase-2 {
+    width:475px;
+    -webkit-transition: all 100ms ease;
+ -moz-transition: all 100ms ease;
+ -ms-transition: all 100ms ease;
+ -o-transition: all 100ms ease;
+ transition: all 100ms ease;
+ }
+ .anim-phase-3 {
+    width:720px;
+    -webkit-transition: all 100ms ease;
+ -moz-transition: all 100ms ease;
+ -ms-transition: all 100ms ease;
+ -o-transition: all 100ms ease;
+ transition: all 100ms ease;
+ }
+ .parcours-active {
+    opacity:1;
+    z-transition: all 1s ease;
+ -ms-transition: all 1s ease;
+ -o-transition: all 1s ease;
+ transition: all 1s ease;
+ }

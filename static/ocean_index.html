@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personality Quiz</title>
+    <link href="ocean_index.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="question-box">
+        <div class="question-container" id="question-container">
+          <!-- Questions will be added here dynamically -->
+        </div>
+        <div class="btn-container">
+          <button id="start-btn">Start Quiz</button>
+          <button id="prev-btn" style="display: none">Previous</button>
+          <button id="next-btn" style="display: none">Next</button>
+          <button id="submit-btn" style="display: none" onclick="oceanScore()">Submit Quiz</button>
+        </div>
+      </div>
+      <div class="score-container" id="score-container"></div>
+    </div>
+    <script src="ocean_index.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

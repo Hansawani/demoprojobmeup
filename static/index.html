@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="style.css">
+  
+<!-- 
+<script   type="text/javascript"   src="{{ url_for('static', filename='abstract.js') }}"></script>
+<script  type="text/javascript"   src="{{ url_for('static', filename='numerical-test.js') }}"></script>
+<script   type="text/javascript"  src="{{ url_for('static', filename='ocean_index.js') }}"></script>
+<script  type="text/javascript"   src="{{ url_for('static', filename='perceptual_test.js') }}"></script>
+<script   type="text/javascript"  src="{{ url_for('static', filename='spatial-test.js') }}"></script>
+<script  type="text/javascript"   src="{{ url_for('static', filename='verbal.js') }}"></script> -->
+
+<script   type="text/javascript"   src="index.js"></script>
+
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Salary Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+
+    <form  action="{{ url_for('predict')}}" method="post"   >
+    	<input type="number" name="test1" placeholder="Test1"  id="test1" />
+        <input type="number" name="test2" placeholder="Test2"  id="test2" />
+		<input type="number" name="test3" placeholder="Test3"   id="test3" />
+        <input type="number" name="test4" placeholder="Test4"   id="test4" />
+        <input type="number" name="test5" placeholder="Test5" id="test5" />
+		<input type="number" name="test6" placeholder="Test6"  id="test6" />
+        <input type="number" name="test7" placeholder="Test7"  id="test7" />
+        <input type="number" name="test8" placeholder="Test8"  id="test8" />
+		<input type="number" name="test9" placeholder="Test9"  id="test9" />
+        <input type="number" name="test10" placeholder="Test10"  id="test10" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large" >Predict</button>
+    </form>
+
+   <br>
+   <br>
+   
+
+ </div>
+
+
+
+ <!-- <script type="text/javascript"  >
+
+document.addEventListener("DOMContentLoaded", function () {
+
+document.getElementById('test1').value=score1;
+document.getElementById('test2').value=score2;
+document.getElementById('test3').value=score3;
+document.getElementById('test4').value=score4;
+document.getElementById('test5').value=score5;
+document.getElementById('test6').value=score6;
+document.getElementById('test7').value=score7;
+document.getElementById('test8').value=score8;
+document.getElementById('test9').value=score9;
+document.getElementById('test10').value=score10; -->
+
+
+
+
+
+<!-- // function submitform()
+// {
+// document.getElementById('test1').value=score1;
+// document.getElementById('test2').value=score2;
+// document.getElementById('test3').value=score3;
+// document.getElementById('test4').value=score4;
+// document.getElementById('test5').value=score5;
+// document.getElementById('test6').value=score6;
+// document.getElementById('test7').value=score7;
+// document.getElementById('test8').value=score8;
+// document.getElementById('test9').value=score9;
+// document.getElementById('test10').value=score10;
+
+// var data=
+
+
+
+// } -->
+
+</body>
+</html>

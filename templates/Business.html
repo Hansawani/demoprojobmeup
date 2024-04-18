@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Animated Social Media Dashboard</title>
+
+  <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-sunburst.min.js"></script>
+
+  <link href="{{ url_for('static', filename='sunburst.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='timeline.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <base href="https://raw.githubusercontent.com/RahulSahOfficial/dashboard/main/"> -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Business</title>
+  </head>
+  <body class="dark">
+    <div class="maindiv">
+      <div class="header">
+        <div class="text">
+          <h1>Social Media Dashboard</h1>
+          <h3>Total Followers: 23,004</h3>
+        </div>
+        <div class="buttonbox">
+          <p>Dark Mode</p>
+          <label class="switch">
+            <input type="checkbox" id="darkmode" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="cardbox">
+        <div class="herocardbox">
+        <div id="left_side">
+          <div class="eachherocard animate tw">
+            <div id="sun_burst"></div>
+            
+            
+          </div>
+        </div>
+        <div id="right_side">
+          <div class="eachherocard animate ig">
+            
+            <p class="count">Video RTC</p>
+            
+            
+          </div>
+          <div class="eachherocard animate yt">
+           
+            <p class="count">Resume Builder</p>
+            
+            
+          </div>
+        </div>
+        </div>
+        <h2>Overview - Today</h2>
+        <div class="detailcardbox">
+          <div class="timeline-parcours">
+            <div class="container-info">
+               <div class="timeline-section-tl">
+                  <div class="parcours-box parc1">
+                     <div class="infobox date1">
+                        <h3>Titre titre 1</h3>
+                        <p class="subt-infobox">ceci est un test</p>
+                        <p class="infobox-text">ceci est un court texte d'information par rapport à un évènement</p>
+                     </div>
+                     <div class="fleche-bloc"></div>
+                  </div>
+               </div>
+               <div class="timeline-section-tl">
+                  <div class="parcours-box parc2">
+                     <div class="infobox date1">
+                        <h3>Titre titre 2</h3>
+                        <p class="subt-infobox">ceci est un test</p>
+                        <p class="infobox-text">ceci est un court texte d'information par rapport à un évènement</p>
+                     </div>
+                     <div class="fleche-bloc"></div>
+                  </div>
+               </div>
+               <div class="timeline-section-tl">
+                  <div class="parcours-box parc3">
+                     <div class="infobox date1">
+                        <h3>Titre titre 3</h3>
+                        <p class="subt-infobox">ceci est un test</p>
+                        <p class="infobox-text">ceci est un court texte d'information par rapport à un évènement</p>
+                     </div>
+                     <div class="fleche-bloc"></div>
+                  </div>
+               </div>
+               <div class="timeline-section-tl">
+                  <div class="parcours-box parc4">
+                     <div class="infobox date1">
+                        <h3>Titre titre 4</h3>
+                        <p class="subt-infobox">ceci est un test</p>
+                        <p class="infobox-text">ceci est un court texte d'information par rapport à un évènement</p>
+                     </div>
+                     <div class="fleche-bloc"></div>
+                  </div>
+               </div>
+            </div>
+   
+            <div class="container-time-line">
+               <div class="time-line-parcours">
+                  <div class="timeline-indicator">
+                     <p class="indicator-val"></p>
+                  </div>
+               </div>
+            </div>
+            <div class="container-bulle">
+               <div class="timeline-section-tl">
+                  <div class="tl-round round1"></div>
+               </div>
+               <div class="timeline-section-tl">
+                  <div class="tl-round round2"></div>
+               </div>
+               <div class="timeline-section-tl">
+                  <div class="tl-round round3"></div>
+               </div>
+               <div class="timeline-section-tl">
+                  <div class="tl-round round4"></div>
+               </div>
+            </div>
+   
+         </div>
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. <br />
+      Coded by
+      <a href="https://www.instagram.com/developer_sah/" target="_blank"
+        >Rahul Sah</a
+      >.
+    </div>
+  </body>
+</html>
+<!-- partial -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script src="{{ url_for('static', filename='sunburst.js') }}"></script>
+<script src="{{ url_for('static', filename='timeline.js') }}"></script>
+
+</body>
+</html>

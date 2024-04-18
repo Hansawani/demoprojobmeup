@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using External JavaScript with Iframes</title>
+</head>
+<style>
+    iframe {
+        width: 100%;
+        height: 100vh; /* Set height to 100% of the viewport height */
+        border: none; /* Remove iframe border */
+    }
+</style>
+<body>
+    <iframe id="iframe1" src="{{ url_for('static', filename='ocean_index.html') }}"></iframe>
+    <iframe id="iframe2" src="{{ url_for('static', filename='perceptual_Aptitude_test.html') }}"></iframe>
+    <iframe id="iframe3" src="{{ url_for('static', filename='verbal_reasoning.html') }}" ></iframe>
+    <iframe id="iframe4" src="{{ url_for('static', filename='abstract_aptitude.html') }}"></iframe>
+    <iframe id="iframe5" src="{{ url_for('static', filename='spatial-test.html') }}"></iframe>
+    <iframe id="iframe6" src="{{ url_for('static', filename='numerical-test.html') }}"></iframe>
+    <iframe id="iframe7" src="{{ url_for('static', filename='index.html') }}"></iframe>
+</body>
+
+</html>
