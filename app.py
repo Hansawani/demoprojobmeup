@@ -1,4 +1,5 @@
 from flask import Flask, request,jsonify,render_template, redirect,session
+import razorpay
 from flask_sqlalchemy import SQLAlchemy
 import bcrypt
 import numpy as np
@@ -10,6 +11,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
 app.secret_key = 'jobmeup'
 
+client = razorpay.Client(auth=("rzp_test_Hw4sQn2Wrbsw8u", "FzZKveveEpe47blpGKe9Ssgq"))
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -17,7 +20,7 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
 
-    def __init__(self,email,password,name):
+    def _init_(self,email,password,name):
         self.name = name
         self.email = email
         self.password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
@@ -96,9 +99,9 @@ def logout():
 
 model = pickle.load(open('model.pkl', 'rb'))
 
-# @app.route('/hi')
-# def home():
-#     return render_template('index.html')
+@app.route('/hi')
+def home():
+    return render_template('index.html')
 
 
 @app.route('/predict',methods=['POST'])
@@ -111,8 +114,6 @@ def predict():
     prediction = model.predict(final_features)
 
     output = round(prediction[0], 9)
-
-    return render_template('index.html', prediction_text='the ans is= {}'.format(output))
 
     if output==0:
         return render_template('health_care.html')
@@ -134,5 +135,36 @@ def predict():
         return render_template('webrtc.html')
 
 
-app.run(debug=True)
 
+@app.route('/payment_form')
+def func_name():
+    return render_template('form.html')
+
+@app.route('/pay', methods=["GET", "POST"])
+def pay():
+    if request.form.get("amount") != "":
+        amount=request.form.get("amt")
+        data = { "amount": amount, "currency": "INR", "receipt": "order_rcptid_11" }
+        payment = client.order.create(data=data)
+        pdata=[amount, payment["id"]]
+        return render_template("payment.html", pdata=pdata)
+    return redirect("/")
+
+@app.route('/success', methods=["POST"])
+def success():
+    pid=request.form.get("razorpay_payment_id")
+    ordid=request.form.get("razorpay_order_id")
+    sign=request.form.get("razorpay_signature")
+    print(f"The payment id : {pid}, order id : {ordid} and signature : {sign}")
+    params={
+    'razorpay_order_id': ordid,
+    'razorpay_payment_id': pid,
+    'razorpay_signature': sign
+    }
+    final=client.utility.verify_payment_signature(params)
+    if final == True:
+        return redirect("/", code=301)
+    return "Something Went Wrong Please Try Again"
+
+if __name__ == '__main__':
+    app.run(debug=True)
